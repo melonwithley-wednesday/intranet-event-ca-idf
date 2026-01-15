@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Intranet – Crédit Agricole Île-de-France</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BANNIÈRE INTRANET -->
+<header class="top-banner">
+    Intranet – Crédit Agricole Île-de-France
+</header>
+
+<!-- PAGE PRINCIPALE -->
+<div class="page">
+
+    <!-- BLOC CENTRAL -->
+    <div class="box">
+
+        <h1>Bienvenue sur l’intranet</h1>
+
+        <p class="event-title">EVENT – Centré sur les sens</p>
+        <p class="event-date">Vendredi 9 octobre 2026</p>
+
+        <p class="description">
+            Cet événement s’inscrit dans le projet de valorisation du domaine forestier
+            du Crédit Agricole Île-de-France. Il propose aux collaborateurs une expérience
+            immersive en pleine nature, favorisant le bien-être, la cohésion et la
+            reconnexion aux valeurs environnementales.
+        </p>
+
+        <!-- BOUTONS -->
+        <button onclick="openForm()">S’inscrire à l’événement</button>
+        <button class="secondary" onclick="declineEvent()">Ne pas s’inscrire</button>
+
+        <!-- MESSAGE NON INSCRIPTION -->
+        <p id="decline-message" class="confirmation hidden">
+            Votre choix a bien été pris en compte. Merci pour votre retour.
+        </p>
+
+        <!-- FORMULAIRE (CACHÉ AU DÉPART) -->
+        <div id="formulaire" class="form">
+            <h2>Inscription à l’événement</h2>
+
+            <label>Nom</label>
+            <input type="text" placeholder="Nom">
+
+            <label>Prénom</label>
+            <input type="text" placeholder="Prénom">
+
+            <label>Email professionnel</label>
+            <input type="email" placeholder="prenom.nom@ca-idf.fr">
+
+            <button onclick="confirmInscription()">Valider l’inscription</button>
+
+            <p id="confirmation" class="confirmation hidden">
+                ✅ Votre demande d’inscription a bien été prise en compte.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BANNIÈRE BAS -->
+<footer class="bottom-banner">
+    Événement collaborateurs – inscriptions ouvertes
+</footer>
+
+<!-- SCRIPT -->
+<script>
+function openForm() {
+    document.getElementById("formulaire").classList.add("active");
+}
+
+function confirmInscription() {
+    document.getElementById("confirmation").classList.remove("hidden");
+}
+
+function declineEvent() {
+    document.getElementById("decline-message").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
